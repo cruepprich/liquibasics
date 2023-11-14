@@ -1,0 +1,1 @@
+lb cac -chf  source/tables/010_dept.sql -chi source/tables/010_dept.sql::dept_create::crueppri

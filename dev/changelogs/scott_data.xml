@@ -1,0 +1,177 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <changeSet  author="crueppri"  id="emp_delete">  
+        <delete  schemaName="scott" tableName="emp">  
+            <where>1=1</where>  
+        </delete>  
+        <delete  schemaName="scott" tableName="dept"/>  
+    </changeSet>
+    <changeSet author="crueppri (generated)" id="1699914391089-1">
+        <insert schemaName="SCOTT" tableName="DEPT">
+            <column name="DEPTNO" valueNumeric="10"/>
+            <column name="DNAME" value="ACCOUNTING"/>
+            <column name="LOC" value="NEW YORK"/>
+            <column name="FOO"/>
+        </insert>
+        <insert schemaName="SCOTT" tableName="DEPT">
+            <column name="DEPTNO" valueNumeric="20"/>
+            <column name="DNAME" value="RESEARCH"/>
+            <column name="LOC" value="DALLAS"/>
+            <column name="FOO"/>
+        </insert>
+        <insert schemaName="SCOTT" tableName="DEPT">
+            <column name="DEPTNO" valueNumeric="30"/>
+            <column name="DNAME" value="SALES"/>
+            <column name="LOC" value="CHICAGO"/>
+            <column name="FOO"/>
+        </insert>
+        <insert schemaName="SCOTT" tableName="DEPT">
+            <column name="DEPTNO" valueNumeric="40"/>
+            <column name="DNAME" value="OPERATIONS"/>
+            <column name="LOC" value="BOSTON"/>
+            <column name="FOO"/>
+        </insert>
+    </changeSet>
+    <changeSet author="crueppri (generated)" id="1699914391089-2">
+        <insert schemaName="SCOTT" tableName="EMP" >
+            <column name="EMPNO" valueNumeric="7369"/>
+            <column name="ENAME" value="SMITH"/>
+            <column name="JOB" value="CLERK"/>
+            <column name="MGR" valueNumeric="7902"/>
+            <column name="HIREDATE" valueDate="1980-12-17T00:00:00"/>
+            <column name="SAL" valueNumeric="800"/>
+            <column name="COMM"/>
+            <column name="DEPTNO" valueNumeric="20"/>
+        </insert>
+        <insert schemaName="SCOTT" tableName="EMP">
+            <column name="EMPNO" valueNumeric="7499"/>
+            <column name="ENAME" value="ALLEN"/>
+            <column name="JOB" value="SALESMAN"/>
+            <column name="MGR" valueNumeric="7698"/>
+            <column name="HIREDATE" valueDate="1981-02-20T00:00:00"/>
+            <column name="SAL" valueNumeric="1600"/>
+            <column name="COMM" valueNumeric="300"/>
+            <column name="DEPTNO" valueNumeric="30"/>
+        </insert>
+        <insert schemaName="SCOTT" tableName="EMP">
+            <column name="EMPNO" valueNumeric="7521"/>
+            <column name="ENAME" value="WARD"/>
+            <column name="JOB" value="SALESMAN"/>
+            <column name="MGR" valueNumeric="7698"/>
+            <column name="HIREDATE" valueDate="1981-02-22T00:00:00"/>
+            <column name="SAL" valueNumeric="1250"/>
+            <column name="COMM" valueNumeric="500"/>
+            <column name="DEPTNO" valueNumeric="30"/>
+        </insert>
+        <insert schemaName="SCOTT" tableName="EMP">
+            <column name="EMPNO" valueNumeric="7566"/>
+            <column name="ENAME" value="JONES"/>
+            <column name="JOB" value="MANAGER"/>
+            <column name="MGR" valueNumeric="7839"/>
+            <column name="HIREDATE" valueDate="1981-04-02T00:00:00"/>
+            <column name="SAL" valueNumeric="2975"/>
+            <column name="COMM"/>
+            <column name="DEPTNO" valueNumeric="20"/>
+        </insert>
+        <insert schemaName="SCOTT" tableName="EMP">
+            <column name="EMPNO" valueNumeric="7654"/>
+            <column name="ENAME" value="MARTIN"/>
+            <column name="JOB" value="SALESMAN"/>
+            <column name="MGR" valueNumeric="7698"/>
+            <column name="HIREDATE" valueDate="1981-09-28T00:00:00"/>
+            <column name="SAL" valueNumeric="1250"/>
+            <column name="COMM" valueNumeric="1400"/>
+            <column name="DEPTNO" valueNumeric="30"/>
+        </insert>
+        <insert schemaName="SCOTT" tableName="EMP">
+            <column name="EMPNO" valueNumeric="7698"/>
+            <column name="ENAME" value="BLAKE"/>
+            <column name="JOB" value="MANAGER"/>
+            <column name="MGR" valueNumeric="7839"/>
+            <column name="HIREDATE" valueDate="1981-05-01T00:00:00"/>
+            <column name="SAL" valueNumeric="2850"/>
+            <column name="COMM"/>
+            <column name="DEPTNO" valueNumeric="30"/>
+        </insert>
+        <insert schemaName="SCOTT" tableName="EMP">
+            <column name="EMPNO" valueNumeric="7782"/>
+            <column name="ENAME" value="CLARK"/>
+            <column name="JOB" value="MANAGER"/>
+            <column name="MGR" valueNumeric="7839"/>
+            <column name="HIREDATE" valueDate="1981-06-09T00:00:00"/>
+            <column name="SAL" valueNumeric="2450"/>
+            <column name="COMM"/>
+            <column name="DEPTNO" valueNumeric="10"/>
+        </insert>
+        <insert schemaName="SCOTT" tableName="EMP">
+            <column name="EMPNO" valueNumeric="7788"/>
+            <column name="ENAME" value="SCOTT"/>
+            <column name="JOB" value="ANALYST"/>
+            <column name="MGR" valueNumeric="7566"/>
+            <column name="HIREDATE" valueDate="1987-04-19T00:00:00"/>
+            <column name="SAL" valueNumeric="3000"/>
+            <column name="COMM"/>
+            <column name="DEPTNO" valueNumeric="20"/>
+        </insert>
+        <insert schemaName="SCOTT" tableName="EMP">
+            <column name="EMPNO" valueNumeric="7839"/>
+            <column name="ENAME" value="KING"/>
+            <column name="JOB" value="PRESIDENT"/>
+            <column name="MGR"/>
+            <column name="HIREDATE" valueDate="1981-11-17T00:00:00"/>
+            <column name="SAL" valueNumeric="5000"/>
+            <column name="COMM"/>
+            <column name="DEPTNO" valueNumeric="10"/>
+        </insert>
+        <insert schemaName="SCOTT" tableName="EMP">
+            <column name="EMPNO" valueNumeric="7844"/>
+            <column name="ENAME" value="TURNER"/>
+            <column name="JOB" value="SALESMAN"/>
+            <column name="MGR" valueNumeric="7698"/>
+            <column name="HIREDATE" valueDate="1981-09-08T00:00:00"/>
+            <column name="SAL" valueNumeric="1500"/>
+            <column name="COMM" valueNumeric="0"/>
+            <column name="DEPTNO" valueNumeric="30"/>
+        </insert>
+        <insert schemaName="SCOTT" tableName="EMP">
+            <column name="EMPNO" valueNumeric="7876"/>
+            <column name="ENAME" value="ADAMS"/>
+            <column name="JOB" value="CLERK"/>
+            <column name="MGR" valueNumeric="7788"/>
+            <column name="HIREDATE" valueDate="1987-05-23T00:00:00"/>
+            <column name="SAL" valueNumeric="1100"/>
+            <column name="COMM"/>
+            <column name="DEPTNO" valueNumeric="20"/>
+        </insert>
+        <insert schemaName="SCOTT" tableName="EMP">
+            <column name="EMPNO" valueNumeric="7900"/>
+            <column name="ENAME" value="JAMES"/>
+            <column name="JOB" value="CLERK"/>
+            <column name="MGR" valueNumeric="7698"/>
+            <column name="HIREDATE" valueDate="1981-12-03T00:00:00"/>
+            <column name="SAL" valueNumeric="950"/>
+            <column name="COMM"/>
+            <column name="DEPTNO" valueNumeric="30"/>
+        </insert>
+        <insert schemaName="SCOTT" tableName="EMP">
+            <column name="EMPNO" valueNumeric="7902"/>
+            <column name="ENAME" value="FORD"/>
+            <column name="JOB" value="ANALYST"/>
+            <column name="MGR" valueNumeric="7566"/>
+            <column name="HIREDATE" valueDate="1981-12-03T00:00:00"/>
+            <column name="SAL" valueNumeric="3000"/>
+            <column name="COMM"/>
+            <column name="DEPTNO" valueNumeric="20"/>
+        </insert>
+        <insert schemaName="SCOTT" tableName="EMP">
+            <column name="EMPNO" valueNumeric="7934"/>
+            <column name="ENAME" value="MILLER"/>
+            <column name="JOB" value="CLERK"/>
+            <column name="MGR" valueNumeric="7782"/>
+            <column name="HIREDATE" valueDate="1982-01-23T00:00:00"/>
+            <column name="SAL" valueNumeric="1300"/>
+            <column name="COMM"/>
+            <column name="DEPTNO" valueNumeric="10"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

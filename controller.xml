@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ora="http://www.oracle.com/xml/ns/dbchangelog-ext"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.17.xsd"
+>
+
+    <include
+        relativeToChangelogFile="true"
+        file="source/_dba/create_scott.sql"
+    />
+    <includeAll
+        relativeToChangelogFile="true"
+        errorIfMissingOrEmpty="false"
+        path="source/tables"
+    />
+    <includeAll
+        relativeToChangelogFile="true"
+        errorIfMissingOrEmpty="false"
+        path="source/seeds"
+    />
+    <changeSet id="custom" author="crueppri" runOnChange="true" >
+        <ora:runOracleScript 
+                ownerName="crueppri" 
+                sourceType="FILE" 
+                objectType="SCRIPT" 
+                objectName="custom" 
+                relativeToChangelogFile="true" >
+            <ora:source>
+                source/custom/custom.sql
+            </ora:source>
+        </ora:runOracleScript>
+        <rollback><sql>delete scott.bonus</sql></rollback>
+    </changeSet>
+
+
+</databaseChangeLog>
